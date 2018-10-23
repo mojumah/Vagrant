@@ -6,5 +6,5 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install docker-ce -y
 sudo docker run -u root --rm -d -p 8080:8080 -p 50000:50000 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
-sudo docker exec -it $(docker ps --format "{{.Names}}") /bin/bash
+
 cat /var/jenkins_home/secrets/initialAdminPassword
